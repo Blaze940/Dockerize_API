@@ -1,0 +1,15 @@
+#directoires
+node_modules
+dist
+bower.components
+release-builds
+.idea
+
+#files
+*.tgz
+*.log
+*.vscode
+logs
+.history/*
+src/.env
+src/package-lock.json
