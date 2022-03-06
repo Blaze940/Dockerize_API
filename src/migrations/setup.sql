@@ -12,6 +12,7 @@ CREATE TABLE users(
     id SERIAL PRIMARY KEY NOT NULL,
     firstname VARCHAR(50) NOT NULL,
     lastname VARCHAR(50) NOT NULL,
+    email VARCHAR(25) NOT NULL,
     password CHAR(10) NOT NULL,
     login VARCHAR(10) NOT NULL,
     UNIQUE(login)
