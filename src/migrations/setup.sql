@@ -14,7 +14,7 @@ CREATE TABLE users(
     lastname VARCHAR(50) NOT NULL,
     password CHAR(10) NOT NULL,
     login VARCHAR(10) NOT NULL,
-    UNIQUE(id)
+    UNIQUE(login)
 )
 
 INSERT INTO users(firstname, lastname, password, login) VALUES ('testFirst', 'testLast', 'test123456', 'test');
