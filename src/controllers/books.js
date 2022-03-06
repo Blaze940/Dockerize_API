@@ -3,6 +3,9 @@ const pg = require('../postgres');
 exports.findBooks = function(req, res) {
     pg.queryAll('SELECT * FROM BOOKS')
         .then(thing => {
+            if (thing.rowCount === 0){
+                return res.status(404).json({error: "Aucun livre dans la base de données"})
+            }
             res.status(200).json(thing.rows);
         })
         .catch(error => res.status(500).json(error));
