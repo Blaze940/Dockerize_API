@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b888b193-02dc-4b92-ae8f-be93d6ef03b1",
+		"_postman_id": "8a9f67e9-b5d2-4b72-9b29-1d97e2dcc719",
 		"name": "API_DOCKER",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -117,6 +117,46 @@
 					"path": [
 						"books",
 						"81-1066"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/books/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/books/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books",
+						"signin"
 					]
 				}
 			},
