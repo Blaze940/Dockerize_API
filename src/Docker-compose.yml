@@ -1,0 +1,35 @@
+version: '3.8'
+
+services: 
+  node_backend:
+    container_name: api-docker
+    image: api-docker
+    build: 
+      context: .
+    ports:
+      - "5000:5000"
+    depends_on: 
+      - node_db
+    networks:
+      - dev
+  node_db: 
+    container_name: node_db
+    image: "postgres:12"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=book
+    volumes:
+      - nps_data:/var/lib/postgresql/data
+    networks:
+      - dev
+
+volumes:
+  nps_data: {}
+
+networks:
+    dev:
+        external: true 
+    

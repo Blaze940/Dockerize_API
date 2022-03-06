@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "8a9f67e9-b5d2-4b72-9b29-1d97e2dcc719",
+		"name": "API_DOCKER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAll books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\": \"81-1066\",\r\n    \"title\": \"TEST\",\r\n    \"author\": \"AUTHOR\",\r\n    \"overview\": \"zeuifhzeuigfze\",\r\n    \"picture\": {\r\n            \"type\": \"Buffer\",\r\n            \"data\": [\r\n                112,\r\n                105,\r\n                99,\r\n                116,\r\n                117,\r\n                114,\r\n                101,\r\n                32,\r\n                50\r\n            ]\r\n        },\r\n        \"read_count\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/books/createBooks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books",
+						"createBooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get book by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/books/80-1065",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books",
+						"80-1065"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\": \"81-1067\",\r\n    \"title\": \"TESTSTETSETSTESTETSTETSETSTETS\",\r\n    \"author\": \"Louis-Ferdinand Céline\",\r\n    \"overview\": \"Bardamu raconte son expérience de la Première Guerre mondiale,\\n du colonialisme\",\r\n    \"picture\": {\r\n        \"type\": \"Buffer\",\r\n        \"data\": [\r\n            112,\r\n            105,\r\n            99,\r\n            116,\r\n            117,\r\n            114,\r\n            101,\r\n            32,\r\n            50\r\n        ]\r\n    },\r\n    \"read_count\": 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/books/updateBooks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books",
+						"updateBooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/books/81-1066",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books",
+						"81-1066"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/books/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/books/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
